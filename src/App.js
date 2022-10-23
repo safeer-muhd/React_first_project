@@ -16,6 +16,18 @@ import Apicall from './components/Apicall'
 
 const data = 'for the first react js project'
 function App() {
+  //Routing method :
+  const [rout,setRout] = useState('')
+
+  let component
+
+  if(rout === 'about'){
+    component = <About/>
+  }
+  if(rout === 'profile'){
+    component = <Profile/>
+  }
+
   //day _2 and 3 first useState Operations :
   const [count,setCount] = useState(0)
   function addCount(){
@@ -55,9 +67,10 @@ function App() {
           )
         })
       }
-
-      <About/>
-      <Profile/>
+      
+      <button onClick={() => setRout('about')}>Abount</button>
+      <button onClick={() => setRout('profile')}>Profile</button>
+      {component}
       
       <h1 onClick={() => setState(!state)}>Show/Hide</h1>
       

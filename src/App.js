@@ -4,9 +4,13 @@ import {useState} from 'react'
 import Counter from './Counter'
 import Employee from './Employee'
 import Counter1 from './Counter1'
+import About from './Container/About'
+import Profile from './Container/Profile'
 
 // API colling method 
 import Apicall from './components/Apicall'
+
+
 
 //Import moduls 
 
@@ -51,6 +55,9 @@ function App() {
           )
         })
       }
+
+      <About/>
+      <Profile/>
       
       <h1 onClick={() => setState(!state)}>Show/Hide</h1>
       
